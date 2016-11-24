@@ -1,25 +1,10 @@
-# README
+# Ruby on rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Site ideia inicial, é um site de utilidades.
 
-Things you may want to cover:
+Esta é a primeira aplicação para o 
+[* nomadic *] (http://www.nomadic.org/ em um futuro distante) 
+por [elizeu de santana] (https://github.com/elizeudesantana/nomadic) - publico
+& (https://bitbucket.org/elizeudesantana/nomadic1) - privado.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # nomadic
