@@ -1,0 +1,34 @@
+<!-- app/views/todos/_form.html.erb -->
+<%= form_for(lembrete, html: {class: 'form-horizontal'}) do |f| %>
+  <% if lembrete.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lembrete.errors.count, "error") %> não é possivel salvar:</h2>
+      <ul>
+        <% lembrete.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="field form-group">
+  <%= f.label :titulo, class: 'col-sm-2 control-label' %>            
+  <div class="col-sm-10">            
+    <%= f.text_field :titulo, class: 'form-control' %>
+  </div>                       
+</div>            
+  
+<div class="field form-group">            
+  <%= f.label :nota, class: 'col-sm-2 control-label' %>            
+  <div class="col-sm-10">            
+    <%= f.text_area :nota, class: 'form-control' %>            
+  </div>            
+</div>            
+  
+<div class="actions form-group">            
+  <div class="col-sm-offset-2 col-sm-10">            
+    <%= f.submit %>            
+  </div>            
+</div>    
+<!--fehar com o form-->        
+<% end %>             

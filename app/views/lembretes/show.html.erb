@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @lembrete.titulo %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @lembrete.nota %>
+</p>
+<%= link_to edit_lembrete_path(@lembrete), class: 'btn btn-info btn-xs' do %>  
+  <i class="glyphicon glyphicon-question-sign"></i> editar      
+<% end %> 
+<%= link_to lembretes_path, class: 'btn btn-default btn-xs' do %>  
+  <i class="glyphicon glyphicon-share-alt"></i> voltar      
+<% end %>
+

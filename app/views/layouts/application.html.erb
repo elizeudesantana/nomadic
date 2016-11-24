@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+        <head>   
+          <title>nomadic</title>   
+            <%= csrf_meta_tags %>    
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>   
+            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+        </head> 
+        <body> 
+          <%= render 'shared/navigation' %>     
+          <div id="main-container" class="container">   
+              <div class="row"> 
+                  <div class="col-xs-3">  <left>
+                    <%= image_tag("logo_transparente.png", alt: "logo_nomadic") %>
+                    <br><br><br><br><br><br><br><br>
+                    <span class="has-tooltip" data-toggle="tooltip" title="etste">
+                    
+                    <%= link_to lembretes_path, class: 'btn btn-primary btn-xs' do %>
+                      <h6><b>lembretes</b></h6>
+                    <% end %> <br>
+                    <%= link_to news_index_path, class: 'btn btn-primary btn-xs' do %>
+                      <h6><b>news</b></h6>
+                    <% end %> 
+                    </left>
+                  </div>        
+                  <div class="col-xs-9">    
+                    <%= yield %>  
+                  </div> 
+              </div>        
+          </div>
+          <div class="container">
+            <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+            <% end -%>
+            <div class="row">  
+              <div class="col-xs-3"></div>  
+                <div class="col-xs-9">
+                  <div class="row"> 
+                    <div class="col-xs-6">  
+                      <div class="row">   
+                        <div class="col-xs-6"></div>    
+                          <div class="col-xs-6"></div>    
+                                   
+                          </div>    
+                        </div>  
+                      <div class="col-xs-6">
+                    <div class="row">
+                  <div class="col-xs-6"></div>
+                <div class="col-xs-6"></div>
+              </div>
+            </div>
+          </div>
+        </body>     
+    </html>       

@@ -1,0 +1,24 @@
+<table>
+	<tr>
+    	<td>
+    		<i class="glyphicons glyphicons-one-day"></i>
+    		<h4>news</h4>  (fonte: <a href="www.google.com">www.google.com</a>)
+    	</td>  
+  	</tr>
+	<tr>    
+    <td> 
+			<% @news.each do |news| %>
+			<b><br><%= news.title %></b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= news.description %>
+			<a href="<%= news.link %>" target="_blank">mais no site</a>
+			Data de atualização: <%= news.created_at %>
+			<% end %>
+		</td>
+	</tr>
+</table> 
+<%= will_paginate @News %>
+
